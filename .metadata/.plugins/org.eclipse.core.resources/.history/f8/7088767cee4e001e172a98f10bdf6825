@@ -1,0 +1,72 @@
+package alphonsoTree;
+
+public class MainApplication {
+	
+	 public static void main(String[] args) {
+		
+		 String str = "1,2,3";
+//		 BinaryTree tree = new BinaryTree();
+//	        tree.root = new Node(1);
+//	        tree.root.left = new Node(2);
+//	        tree.root.right = new Node(3);
+//	        tree.root.left.right = new Node(4);
+//	    
+//	        
+//	      BinaryTree myTree = new BinaryTree();
+//	        myTree.root = new Node(1);
+//	        myTree.root.left = new Node(2);
+//	        myTree.root.right = new Node(3);
+//	        myTree.root.left.left = new Node(4);
+//	        myTree.root.left.right = new Node(5);
+//	        myTree.root.right.left = new Node(6);
+//	        myTree.root.right.right = new Node(7);
+//	 
+////	     Printer.TreePrinter(myTree)
+////	     ;
+//	        
+//	        BinaryTree tree3 = new BinaryTree();
+//	        
+//	        tree3.root = new Node(1);
+//	        tree3.root.left = new Node(2);
+//	        tree3.root.right = new Node(3);
+//	        
+//	        tree3.root.left.left = new Node(4);
+//	        tree3.root.left.right = new Node(5);
+//	        
+//	        tree3.root.right.left = new Node(6);
+//	        tree3.root.right.right = new Node(7);
+//	        
+	        
+	        
+	        
+	     
+//	     String str1 = Serializer.serialize(myTree);
+//	     
+//	     
+//	     
+//	     System.out.println(str1);
+//	     
+	  
+	     
+//	     BinaryTree t1 = Deserializer.deserialize(str1);
+	        
+	        
+//	     
+//	     Printer.TreePrinter2(tree3);
+//	     
+//	     Painter painter = new Painter();
+//	     painter.travelBoundary(tree3);
+//	     
+//	     Printer.TreePrinter2(tree3);
+	     
+	     String str1 = "1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31";
+	     
+	     BinaryTree t1 = Deserializer.deserialize(str1);
+	     
+	     Printer.TreePrinter2(t1);
+	     
+	     
+	     
+	}
+
+}

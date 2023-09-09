@@ -1,0 +1,60 @@
+package alphonsoTree;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
+public class Tree {
+	
+	Node root;
+	
+	public static String serialize(Node node) {
+		if(node == null)
+			return null;
+		
+		Stack<Node> stack = new Stack<>();
+		
+		stack.push(node);
+		
+		List<String> l = new ArrayList<>();
+		
+		while(!stack.isEmpty()) {
+			Node curr = stack.pop();
+			
+			if(curr == null) {
+				l.add("*");
+			}else {
+				l.add(""+curr.ch);
+				stack.push(curr.left);
+				stack.push(curr.right);
+			}
+		}
+		
+		return String.join(",", l);
+		
+	}
+	static int t ;
+	
+	public static Node deserialize(String data) {
+		if(data == null) {
+			return null;
+		}
+		
+		t = 0;
+		
+		String[] arr = data.split(",");
+		
+		return helper(arr);
+		
+	}
+
+	private static Node helper(String[] arr) {
+		// TODO Auto-generated method stub
+		if(arr[t].equals("*"))
+			return null;
+		
+		Node node = new Node(arr[t].charAt(0));
+		
+	}
+
+}

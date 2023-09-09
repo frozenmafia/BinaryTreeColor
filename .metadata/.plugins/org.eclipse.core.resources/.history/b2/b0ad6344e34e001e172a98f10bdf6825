@@ -1,0 +1,21 @@
+package alphonsoTree;
+
+public class Node {
+	
+	Node left;
+	Node right;
+	char ch;
+	
+	Node(){
+		ch = 'G';
+	}
+	Node(char ch){
+		this.ch = ch;
+	}
+	
+	@Override
+	public String toString() {
+		return String.valueOf(ch);
+	}
+
+}

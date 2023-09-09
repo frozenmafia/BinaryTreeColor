@@ -1,0 +1,106 @@
+package alphonsoTree;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+import java.util.Stack;
+
+public class Tree {
+	
+	Node root;
+	
+	public static String serialize(Node node) {
+		if(node == null)
+			return null;
+		
+		Stack<Node> stack = new Stack<>();
+		
+		stack.push(node);
+		
+		List<String> l = new ArrayList<>();
+		
+		while(!stack.isEmpty()) {
+			Node curr = stack.pop();
+			
+			if(curr == null) {
+				l.add("*");
+			}else {
+				l.add(""+curr.ch);
+				stack.push(curr.left);
+				stack.push(curr.right);
+			}
+		}
+		
+		return String.join(",", l);
+		
+	}
+	static int t ;
+	
+	public static Node deserialize(String data) {
+		if(data == null) {
+			return null;
+		}
+		
+		t = 0;
+		
+		String[] arr = data.split(",");
+		System.out.println(arr.length);
+		
+		return helper(arr);
+		
+	}
+
+	private static Node helper(String[] arr) {
+		// TODO Auto-generated method stub
+		if(arr[t].equals("*"))
+			return null;
+		
+		Node node = new Node(arr[t].charAt(0));
+		
+		t++;
+		node.left = helper(arr);
+		t++;
+		node.right = helper(arr);
+		
+		return node;
+		
+	}
+	
+	public static void print(Node node) {
+		
+		if(node == null) {
+			System.out.println("This tree is empty");
+			return;
+		}
+		Queue<Node> queue = new LinkedList<>();
+		
+		queue.offer(node);
+		
+		while(!queue.isEmpty()) {
+			int levelSize = queue.size();
+			int hl = levelSize/2;
+			for( int i = 0; i < levelSize; i++) {
+				Node curr = queue.poll();
+				
+				if(curr !=null) {
+					if(i==hl) {
+						System.out.println(curr.ch+" ");
+					}else {
+						System.out.println("  ");
+					}
+					queue.offer(curr.left);
+					queue.offer(curr.right);
+				}else {
+					System.out.println("  ");
+					queue.offer(null);
+					queue.offer(null);
+				}
+				
+			}
+		}
+		System.out.println();
+		
+	}
+
+}

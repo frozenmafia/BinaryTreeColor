@@ -1,0 +1,16 @@
+package alphonsoTree;
+
+public class MainApplication {
+	
+	 public static void main(String[] args) {
+		
+		 String str = "r,g,b";
+		 Tree tree = new Tree();
+		 Node root  = tree.deserialize(str);
+		 
+//		 tree.print(root);
+		 
+		 
+	}
+
+}

@@ -1,0 +1,83 @@
+package alphonsoTree;
+
+public class Painter {
+	
+	boolean flag = true;
+	
+	void travelBoundary(BinaryTree tree) {
+		
+		Node root = tree.root;
+		
+		travelBoundaryLeft(root.left);
+		travelLeaves(root);
+		travelBoundaryRight(root.right);
+		
+		
+	}
+
+	private void travelBoundaryRight(Node node) {
+		// TODO Auto-generated method stub
+		
+		if(node == null) {
+			return;
+		}
+		
+		if(node.right !=null) {
+			travelBoundaryRight(node.right);
+			if(node.ch == 'G') {
+				if(flag) {
+					node.ch = 'B';
+				}else {
+					node.ch = 'R';
+				}
+			}
+		}else if(node.left !=null) {
+			travelBoundaryRight(node.left);
+			if(node.ch == 'G') {
+				if(flag) {
+					node.ch = 'B';
+				}else {
+					node.ch = 'R';
+				}
+			}
+			
+		}
+		
+	}
+
+	private void travelLeaves(Node node) {
+		// TODO Auto-generated method stub
+
+	}
+
+	private void travelBoundaryLeft(Node node) {
+		// TODO Auto-generated method stub
+		if(node == null){
+			return ;
+		}
+		
+		
+		if(node.left!=null) {
+			if(node.ch=='G') {
+				if(flag)
+					node.ch = 'B';
+				else
+					node.ch = 'R';
+			}
+			
+			travelBoundaryLeft(node.left);
+		}else if(node.right !=null) {
+			if(node.ch == 'G') {
+				if(flag)
+					node.ch = 'B';
+				else
+					node.ch = 'R';
+			}
+			
+			travelBoundaryRight(node.right);
+		}
+	}
+	
+	
+	
+}

@@ -1,0 +1,36 @@
+package alphonsoTree;
+
+public class MainApplication {
+	
+	 public static void main(String[] args) {
+		
+		 String str = "1,2,3";
+		 BinaryTree tree = new BinaryTree();
+	        tree.root = new Node(20);
+	        tree.root.left = new Node(8);
+	        tree.root.right = new Node(22);
+	        tree.root.left.left = new Node(4);
+	        tree.root.left.right = new Node(12);
+	        tree.root.left.right.left = new Node(10);
+	        tree.root.left.right.right = new Node(14);
+	 
+	        String serialized = tree.serialize(tree.root);
+	        System.out.println("Serialized view of the tree:");
+	        System.out.println(serialized);
+	        System.out.println();
+	        
+	        tree.print(tree.root);
+	 
+//	        // Deserialize the stored tree into root1
+//	        TreeNode t = deserialize(serialized);
+//		 BinaryTree tree = new BinaryTree();
+//		 Node root  = tree.deserialize(str);
+		 
+		 
+		 
+//		 tree.print(root);
+		 
+		 
+	}
+
+}
