@@ -19,14 +19,13 @@ public class Serializer {
 	        while (!s.isEmpty()) {
 	            Node t = s.pop();
 	 
-	            // If current node is NULL, store marker
+	         
 	            if (t == null) {
 	                l.add("#");
 	            }
 	            else {
 	 
-	                // Else, store current node
-	                // and recur for its children
+	              
 	                l.add("" + t.val);
 	                s.push(t.right);
 	                s.push(t.left);

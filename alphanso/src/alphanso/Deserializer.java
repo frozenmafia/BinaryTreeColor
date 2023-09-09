@@ -1,9 +1,8 @@
 package alphanso;
 
- abstract  class Deserializer {
+ class Deserializer {
 	 static int t;
-	 
-	    // Decodes your encoded data to tree.
+
 	    public static BinaryTree deserialize(String data)
 	    {
 	        if (data == null)
@@ -20,8 +19,6 @@ package alphanso;
 	        if (arr[t].equals("#"))
 	            return null;
 	 
-	        // Create node with this item
-	        // and recur for children
 	        Node root
 	            = new Node(Integer.parseInt(arr[t]));
 	        t++;

@@ -11,6 +11,8 @@ public class MainApplication {
 	    String st1 ="1,#,#";
 	    BinaryTree t1 = Deserializer.deserialize(st1);
 	    painter.travelBoundary(t1);
+		System.out.println();
+		System.out.println("Test case 1" );
 	    Printer.print(t1);
 	    
 	    System.out.println("____________________________________________________________________________________________________________");
@@ -18,6 +20,8 @@ public class MainApplication {
 	    String st2 = "1,2,#,3,4,#,#,#,#";
 	    BinaryTree t2= Deserializer.deserialize(st2);
 	    painter.travelBoundary(t2);
+		System.out.println();
+		System.out.println("Test case 2" );
 	    Printer.print(t2);
 	    
 	    System.out.println("____________________________________________________________________________________________________________");
@@ -27,6 +31,8 @@ public class MainApplication {
 	    
 	    BinaryTree t3 = Deserializer.deserialize(st3);
 	    painter.travelBoundary(t3);
+		System.out.println();
+		System.out.println("Test case 3" );
 	    Printer.print(t3);
 	    
 	    System.out.println("____________________________________________________________________________________________________________");
@@ -35,6 +41,8 @@ public class MainApplication {
 	    String st4 = "1,2,4,#,#,#,3,#,6,#,#";
 	    BinaryTree t4 = Deserializer.deserialize(st4);
 	    painter.travelBoundary(t4);
+		System.out.println();
+		System.out.println("Test case 4" );
 	    Printer.print(t4);
 	    
 	    System.out.println("____________________________________________________________________________________________________________");
@@ -42,6 +50,8 @@ public class MainApplication {
 	    String st5 = "1,2,4,#,8,#,#,5,#,9,#,#,3,6,#,#,7,10,#,#,11,#,#";
 	    BinaryTree t5 = Deserializer.deserialize(st5);
 	    painter.travelBoundary(t5);
+		System.out.println();
+		System.out.println("Test case 5" );
 	    Printer.print(t5);
 	    
 	    System.out.println("____________________________________________________________________________________________________________");
@@ -49,11 +59,13 @@ public class MainApplication {
 	    String st6 = "1,2,4,8,16,#,#,17,#,#,9,18,#,#,19,#,#,5,10,20,#,#,21,#,#,11,22,#,#,23,#,#,3,6,12,24,#,#,25,#,#,13,26,#,#,27,#,#,7,14,26,#,#,29,#,#,15,30,#,#,31,#,#";
 	    BinaryTree t6 = Deserializer.deserialize(st6);
 	    painter.travelBoundary(t6);
+		System.out.println();
+		System.out.println("Test case 6" );
 	    Printer.print(t6);
 	    
 	    System.out.println("____________________________________________________________________________________________________________");
 	    
-	    System.out.println("Custom test Case");
+	    System.out.println("Custom test Case 7");
 	    
 	    String st7 = "1,2,3,7,#,#,#,4,#,6,#,#,5,8,#,9,#,#,#";
 	    BinaryTree t7 = Deserializer.deserialize(st7);
